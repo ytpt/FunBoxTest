@@ -1,0 +1,32 @@
+@font-face {
+	font-family: 'Exo2.0-Thin';
+	src: url('./../../font/Exo2.0-Thin.otf');
+}
+
+@media (max-width: 677px) {
+    .header {
+        font-size: 26px;
+    }
+}
+
+@media (min-width: 678px) {
+
+    .header {
+        font-size: 30px;
+    }
+}
+
+@media (min-width: 1120px) {
+
+    .header {
+        font-size: 36px;
+    }
+}
+
+
+.header {
+    color: #fff;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    font-family: 'Exo2.0-Thin';
+}
