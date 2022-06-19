@@ -17,7 +17,7 @@
 @media (min-width: 1090px) {
 
     .card {
-        max-width: 320px;
+        width: 320px;
         clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     }
 }

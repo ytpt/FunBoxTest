@@ -23,6 +23,13 @@
     }
 }
 
+@media (min-width: 1310px) {
+
+    .header {
+        font-size: 36px;
+    }
+}
+
 
 .header {
     color: #fff;
