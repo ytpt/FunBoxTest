@@ -10,7 +10,10 @@ const Cards = (props) => {
             {cardsState.map(card => <Card key={card.id} flavour={card.flavour}
                 portions={card.portions} mouseCount={card.mouseCount} mouse={card.mouse}
                 kilos={card.kilos} footer={card.footer} link={card.link} dot={card.dot}
-                extra={card.extra} isAvailable={card.isAvailable} />
+                extra={card.extra} isAvailable={card.isAvailable}
+                footerNotChoosenCard={card.footerNotChoosenCard}
+                footerChoosenCard={card.footerChoosenCard}
+                footerNotAvailableCard={card.footerNotAvailableCard} />
                 )
             }
         </div>

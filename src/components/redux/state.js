@@ -26,8 +26,8 @@ let cardsState = [
         footerNotChoosenCard: 'Чего сидишь? Порадуй котэ,',
         footerChoosenCard: 'Головы щучьи с чесноком да свежайшая сёмгушка.',
         footerNotAvailableCard: 'Печалька, с рыбой закончился.',
-        link: '',
-        dot: '',
+        link: 'купи',
+        dot: '.',
         extra: '',
         isAvailable: true
     },
@@ -41,8 +41,8 @@ let cardsState = [
         footerNotChoosenCard: 'Чего сидишь? Порадуй котэ,',
         footerChoosenCard: 'Кура, всем курам кура.',
         footerNotAvailableCard: 'Печалька, с курой закончился.',
-        link: '',
-        dot: '',
+        link: 'купи',
+        dot: '.',
         extra: 'заказчик доволен',
         isAvailable: false
     }
