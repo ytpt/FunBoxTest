@@ -1,6 +1,6 @@
 @media (max-width: 677px) {
   
-    .card, .chosen_card {
+    .card, .chosen_card, .disabled_card {
         width: 290px;
         clip-path: polygon(13.3% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     }
@@ -8,7 +8,7 @@
   
 @media (min-width: 678px) {
 
-    .card, .chosen_card {
+    .card, .chosen_card, .disabled_card {
         width: 300px;
         clip-path: polygon(12.8% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     }
@@ -16,7 +16,7 @@
 
 @media (min-width: 1090px) {
 
-    .card, .chosen_card {
+    .card, .chosen_card, .disabled_card {
         width: 320px;
         clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%, 0 9%);
     }
@@ -90,7 +90,7 @@ p {
     font-weight: bold;
 }
 
-.card img, .chosen_card img {
+.card img, .chosen_card img, .disabled_card img {
     position: absolute;
     top: 235px;
     left: -30px;
@@ -191,10 +191,62 @@ p {
     right: 15px;
 }
 
-.card_disabled {
-    border: 1px solid #999999;
+.disabled_card {
+    border: 4px solid grey;
     background-color: #cccccc;
     color: #666666;
+    margin: 0 auto;
+    position: relative;
+    height: 480px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 25px 0 0 50px;
+    border-radius: 8px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.disabled_card:after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    position: absolute;
+    top: 20px;
+    left: -16px;
+    background: grey;
+    transform: rotate(-45deg);
+    z-index: 102;
+}
+
+.disabled_card:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,255,255,.5);
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.disabled_card_circle {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    background: grey;
+    border-radius: 50%;
+    color: #fff;
+    bottom: 15px;
+    right: 15px;
+}
+
+.disabled_footer_p {
+    color: #d1d152;
 }
 
 
