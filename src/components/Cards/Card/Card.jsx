@@ -10,9 +10,19 @@ const Card = (props) => {
         setIsChosen(!isChosen);
     }
 
+    // function ifCardDisabled(props) {
+    //     const isAvailable = props.isAvailable;
+    //     if (isAvailable) {
+    //         return (!isAvailable);
+    //     }
+    // }
+    //
+    //     disableCard();
+
     return (
         <div className={c.card_wrap}>
-            <a onClick={toggleClickCard} className={isChosen ? c.chosen_card : c.card}>
+            <a onClick={props.isAvailable ? toggleClickCard : null} className={
+                props.isAvailable ? (isChosen ? c.chosen_card : c.card) : c.disabled_card}>
                 <p className={c.card_header}>
                     Сказочное заморское яство
                 </p>
@@ -33,7 +43,9 @@ const Card = (props) => {
                     </div>
                 </div>
                 <img src={cat} alt='Кот' width='370' height='361'></img>
-                <div className={isChosen ? c.chosen_card_circle : c.card_circle}>
+                <div className={props.isAvailable
+                    ? (isChosen ? c.chosen_card_circle : c.card_circle)
+                    : c.disabled_card_circle}>
                     <p className={c.card_circle_size}>
                         {props.kilos}
                         <span>кг</span>
@@ -41,12 +53,15 @@ const Card = (props) => {
                 </div>
             </a>
             <div className={c.card_footer}>
-                <p>{props.footer}
-                    <a className={c.card_footer_link} onClick={() => alert('click')}>
-                        {props.link}
+                <p className={!props.isAvailable && c.disabled_footer_p}>{props.isAvailable
+                    ? (isChosen ? props.footerChosenCard : props.footerNotChosenCard)
+                    : props.footerNotAvailableCard}
+                    <a className={c.card_footer_link}
+                       onClick={props.isAvailable ? toggleClickCard : null}>
+                        {props.isAvailable ? (!isChosen ? props.link : null) : null}
                     </a>
                     <span className={c.card_footer_dot}>
-                        {props.dot}
+                        {props.isAvailable ? (!isChosen ? props.dot : null) : null}
                     </span>
                 </p>
             </div>
