@@ -7,7 +7,7 @@ const Card = (props) => {
     const [isChosen, setIsChosen] = React.useState(false);
 
     const toggleClickCard = () => {
-        isChosen ? setIsChosen(false) : setIsChosen(true);
+        setIsChosen(!isChosen);
     }
 
     return (
